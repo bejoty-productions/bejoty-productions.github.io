@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bejoty Productions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" integrity="sha384-+b1Q6Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw==" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin integrity="sha384-+b1Q6Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw==">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" integrity="sha384-+b1Q6Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw==">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Bejoty Productions</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#games">Games</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h1>About</h1>
+            <p>We are an indie game studio passionate about creating unique and memorable gaming experiences.</p>
+        </section>
+        <section id="games">
+            <h2>Our Games</h2>
+            <div class="game">
+                <h3>Percolator</h3>
+                <p><strong>Percolator</strong> is a unique indie deckbuilding and management game where you run a quirky cafe, manage baristas, and brew the perfect cup. Use cards to grind coffee, boil water, and serve customers, all while balancing time, traits, and special events. Every shift is a new challenge—can you keep your cafe thriving and your customers happy?</p>
+            </div>
+            <p>Stay tuned for our upcoming releases!</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:bejotypro@gmail.com">bejotypro@gmail.com</a></p>
+            <form id="signup-form" autocomplete="off">
+                <label for="signup-email">Join our mailing list:</label><br>
+                <input type="email" id="signup-email" name="email" placeholder="Your email address" required style="margin-top:0.5em;">
+                <!-- Honeypot field for bots -->
+                <input type="text" id="signup-hp" name="signup-hp" style="display:none;" tabindex="-1" autocomplete="off">
+                <button type="submit">Sign Up</button>
+                <span id="signup-message" style="margin-left:1em;"></span>
+            </form>
+        </section>
+        <script>
+        // For security, do NOT include your API key here. POST to your own backend endpoint instead.
+        document.getElementById('signup-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const email = document.getElementById('signup-email').value.trim();
+            const honeypot = document.getElementById('signup-hp').value;
+            const msg = document.getElementById('signup-message');
+            msg.style.color = '';
+            msg.textContent = '';
+            // Honeypot: if filled, likely a bot
+            if (honeypot) {
+                msg.textContent = 'Submission failed.';
+                return;
+            }
+            // Basic email format validation
+            if (!/^\S+@\S+\.\S+$/.test(email)) {
+                msg.textContent = 'Please enter a valid email address.';
+                msg.style.color = 'red';
+                return;
+            }
+            msg.textContent = 'Signing up...';
+            try {
+                // Replace '/api/subscribe' with your backend endpoint
+                const response = await fetch('/api/subscribe', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email })
+                });
+                if (response.ok) {
+                    msg.textContent = 'Thank you for signing up!';
+                    msg.style.color = 'green';
+                    document.getElementById('signup-form').reset();
+                } else {
+                    msg.textContent = 'Signup failed. Please try again later.';
+                    msg.style.color = 'red';
+                }
+            } catch (err) {
+                msg.textContent = 'Network error.';
+                msg.style.color = 'red';
+            }
+        });
+        </script>
+    </main>
+    <footer>
+        <p>&copy; 2025 Bejoty Productions. All rights reserved.</p>
+    </footer>
+</body>
+</html>

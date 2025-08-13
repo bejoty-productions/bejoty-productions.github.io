@@ -1,0 +1,89 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: repeating-linear-gradient(135deg, #f3e9dd 0 40px, #f8f1e7 40px 80px);
+    color: #5a4632;
+    min-height: 100vh;
+}
+header {
+    background: #d2bfa3;
+    color: #4b2e13;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(90, 70, 50, 0.05);
+}
+.logo {
+    font-size: 1.7rem;
+    font-family: 'Pacifico', cursive, 'Segoe UI', Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #7c4f22;
+    text-shadow: 1px 2px 8px #f8f1e7;
+}
+nav a {
+    color: #6b3e1e;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    border-radius: 6px;
+    padding: 0.2em 0.7em;
+    transition: color 0.2s, background 0.2s;
+}
+nav a:hover {
+    color: #fff;
+    background: #a67c52;
+}
+main {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255,250,246,0.95);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(90, 70, 50, 0.13);
+    animation: fadein 1.2s;
+}
+@keyframes fadein {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: none; }
+}
+section {
+    margin-bottom: 2.5rem;
+}
+h1, h2 {
+    color: #a67c52;
+    font-family: 'Pacifico', cursive, 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 1px;
+}
+.game {
+    background: #e7d3b8;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(212, 163, 115, 0.10);
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
+}
+.game:hover {
+    transform: translateY(-4px) scale(1.025);
+    box-shadow: 0 8px 24px rgba(212, 163, 115, 0.18);
+    background: #e3c9a1;
+}
+.game h3 {
+    color: #7c4f22;
+    font-size: 1.3rem;
+    margin-top: 0;
+    font-family: 'Pacifico', cursive, 'Segoe UI', Arial, sans-serif;
+    text-shadow: 0 2px 8px #f3e9dd, 0 1px 0 #fff8f0;
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #d2bfa3;
+    color: #4b2e13;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 8px rgba(90, 70, 50, 0.05);
+}
