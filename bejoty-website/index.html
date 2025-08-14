@@ -4,62 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bejoty Productions</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" integrity="sha384-+b1Q6Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw==" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin integrity="sha384-+b1Q6Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw==">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" integrity="sha384-+b1Q6Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw1Qw==">
+    <link rel="shortcut icon" type="image/x-icon" href="BejotyIcon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/brands.min.css" integrity="sha512-mXqwRsOznG7CS37KA7CLR1Fc72gfOgp7r8xaVdBKoBKhitcKI/mK+IamtZUf+FAkufXOvVTESu9lPsoQc+kFxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header>
-        <div class="logo">Bejoty Productions</div>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#games">Games</a>
-            <a href="#contact">Contact</a>
+    <div class="header-wrapper">
+        <header>
+            <img src="BejotyIcon.png" alt="Bejoty Productions Icon" class="logo-image">
+            <div class="header-content">
+            <div class="logo">
+                <span>Bejoty Productions</span>
+            </div>
+            <nav>
+            <a href="#about"><i class="fa-solid fa-user" style="margin-right:6px;"></i>About</a>
+            <a href="#games"><i class="fa-solid fa-gamepad" style="margin-right:6px;"></i>Games</a>
+            <a href="#contact"><i class="fa-solid fa-envelope" style="margin-right:6px;"></i>Contact</a>
         </nav>
-    </header>
+        </header>
+    </div>
     <main>
-        <section id="about">
-            <h1>About</h1>
-            <p>Bejoty Productions is a solo, indie game developer.</p>
+        <section id="games">
+            <h1><i class="fa-solid fa-gamepad" style="margin-right:10px;color:#a67c52;"></i>Our Games</h1>
+            <div class="game">
+                <div class="game-content">
+                    <div class="game-info">
+                        <h3>Percolator</h3>
+                        <p><strong>Percolator</strong> is a roguelite, deckbuilding game where you manage barista schedules and combine cards to make crazy coffee. Earn lots of money, and invest it until you are a successful cafe!</p>
+                        <a href="https://store.steampowered.com/app/3510610/Percolator/" target="_blank" rel="noopener" class="steam-btn">
+                            <i class="fa-brands fa-steam fa-lg" style="margin-right:8px;"></i> View on Steam
+                        </a>
+                    </div>
+                    <div class="game-image">
+                        <img src="CommunityIcon.png" alt="Percolator Community Icon" width="180" height="180">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <h1><i class="fa-solid fa-user" style="margin-right:10px;color:#a67c52;"></i>About</h1>
+        <section id="about" class="modern-section">
+            <p>Bejoty Productions is a one person, indie game developer.</p>
             <p>Games have always been my escape, a constant grounding force, and a way I connect with some of my best friends. From Hearthstone, to League of Legends, Stardew Valley, and countless others, a variety of games have helped to shape who I am.</p>
             <p>I became a developer to continue passing that forward. My goal is to design experiences that feel fresh, with mechanics that invite deep strategy and replay-ability. I hope that my games can become a meaningful part of other peoples' lives.</p>
         </section>
-        <section id="games">
-            <h2>Our Games</h2>
-            <div class="game">
-                <h3>Percolator</h3>
-                <p><strong>Percolator</strong> is a roguelite, deckbuilding game where you manage barista schedules and combine cards to make crazy coffee. Earn lots of money, and invest it until you are a successful cafe!</p>
-                <a href="https://store.steampowered.com/app/3510610/Percolator/" target="_blank" rel="noopener" class="steam-btn">
-                    <i class="fa-brands fa-steam fa-lg" style="margin-right:8px;"></i> View on Steam
-                </a>
-            </div>
-            <p>Stay tuned for our upcoming releases!</p>
-        </section>
         <section id="contact">
+            <h2 class="contact-title"><i class="fa-solid fa-envelope" style="margin-right:10px;color:#a67c52;"></i>Contact Us</h2>
             <div class="contact-card">
-                <h2 class="contact-title"><span style="vertical-align:middle;">Contact Us</span></h2>
                 <div class="contact-methods">
                     <div class="contact-block">
-                        <h3>Email</h3>
                         <a class="contact-link" href="mailto:bejotypro@gmail.com">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="vertical-align:middle;margin-right:6px;"><rect width="24" height="24" rx="6" fill="#a67c52"/><path d="M4 8v8h16V8l-8 5-8-5z" fill="#fff"/></svg>
-                            bejotypro@gmail.com
+                            <i class="fa-solid fa-paper-plane" style="margin-right:8px;color:#a67c52;"></i>bejotypro@gmail.com
                         </a>
                     </div>
                     <div class="contact-block">
-                        <h3>Discord</h3>
-                        <iframe src="https://discord.com/widget?id=1405342136542433411&theme=dark" width="350" height="120" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" style="border-radius:12px;"></iframe>
+                        <a href="https://discord.com/invite/hyDhjpcV" target="_blank" rel="noopener" class="discord-btn">
+                            <i class="fa-brands fa-discord" style="margin-right:8px;color:#5865F2;"></i>Join our Discord
+                        </a>
                     </div>
                     <div class="contact-block">
-                        <h3>Social Media</h3>
                         <ul class="social-media modern-icons">
-                            <li><a href="https://bsky.app/profile/bejotyproductions.bsky.social" target="_blank" rel="noopener" title="Bluesky"><i class="fa-brands fa-bluesky fa-2x" style="color:#0066FF;"></i></a></li>
-                            <li><a href="https://x.com/BejotyPro" target="_blank" rel="noopener" title="Twitter/X"><i class="fa-brands fa-x-twitter fa-2x" style="color:#000;"></i></a></li>
-                            <li><a href="https://tiktok.com/@bejoty.productions" target="_blank" rel="noopener" title="Tiktok"><i class="fa-brands fa-tiktok fa-2x" style="color:#000;"></i></a></li>
-                            <li><a href="https://instagram.com/bejoty_productions" target="_blank" rel="noopener" title="Instagram"><i class="fa-brands fa-instagram fa-2x" style="color:#E1306C;"></i></a></li>
+                            <li><a href="https://bsky.app/profile/bejotyproductions.bsky.social" target="_blank" rel="noopener" title="Bluesky"><i class="fa-brands fa-bluesky"></i></a></li>
+                            <li><a href="https://x.com/BejotyPro" target="_blank" rel="noopener" title="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a></li>
+                            <li><a href="https://tiktok.com/@bejoty.productions" target="_blank" rel="noopener" title="Tiktok"><i class="fa-brands fa-tiktok"></i></a></li>
+                            <li><a href="https://instagram.com/bejoty_productions" target="_blank" rel="noopener" title="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -67,7 +78,7 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 Bejoty Productions. All rights reserved.</p>
+        <p>&copy; 2025 Bejoty Productions. All rights reserved. <span style="margin-left:10px;color:#a67c52;"><i class="fa-solid fa-heart"></i></span></p>
     </footer>
 </body>
 </html>
